@@ -1,0 +1,27 @@
+export interface ContractsInterface {
+  [chainId: number]: string;
+}
+
+export const tokenContracts: ContractsInterface = {
+  56: "0xdcf06C87CfDf28f3Ee58d6b0b60646cf89527140", // bnb
+  137: "0x8b9c8CaDe55FEB0479602910Ef76F1B070dDf4a3", // polygon
+  56288: "0x24E72C50E4a4f9745A04568922e936365Bf32675", // boba
+  25: "0xd03e6FcF68e59fDCc350a6A1c06d2Bda10EC7f77", // cronos
+  82: "0xA558CFEC30C0fB0f0C97f74278A6E2453A3f5cF1", // meter
+  66: "0x9aB28C407Bdb5f63D856DDA2E932B0DFd2279Fa5", // okx
+  40: "0x24E72C50E4a4f9745A04568922e936365Bf32675", // telos
+};
+
+interface Marketplace {
+  [chainId: number]: string;
+}
+
+export const marketplaceContracts: Marketplace = {
+  56: "0x32dc9aad6bf179C02379E3b93E69c036B10Bb0Ae",
+  137: "0x4962715e0B7158665A80e99c9508F513A0d3e500",
+  56288: "0xA0f4FF4808CAdf029009A51f3AF1Bb0cBE283C72",
+  25: "0xfEEfDca2FfACc52f7148004620393FD5B94b36dF",
+  82: "0x931c951fD61337c07e32593F5ea094B6CC452A4f",
+  66: "0x3F70B465140bd698438f1F48c5c743Ce0709D63A",
+  40: "0x3F70B465140bd698438f1F48c5c743Ce0709D63A",
+};

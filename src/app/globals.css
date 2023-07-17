@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+    background: radial-gradient(circle, rgba(12, 99, 118, 1) 9%, rgba(23, 22, 33, 1) 65%, rgba(97, 17, 55, 1) 100%);
+    margin: 0;
+    padding: 0;
+}
+
+@layer components {
+    .aquire {
+        font-family: "Aquire", sans-serif;
+    }
+}
+
+
+.bg-collection-custom {
+    background: #000000;
+    /*background-image: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(60, 20, 44, 1) 0%, rgba(14, 78, 85, 1) 55%, rgba(60, 19, 44, 1) 100%, rgba(0, 212, 255, 1) 100%);*/
+}
+
+.bg-features-custom {
+    background-image: linear-gradient(90deg, rgb(223, 108, 57) 0%, rgb(192, 31, 166) 0%, rgb(114, 82, 185) 49%, rgb(78, 213, 201) 100%, rgba(0, 212, 255, 1) 100%);
+}
+
+.bg-viewed-custom {
+    background-image: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(14, 89, 87, 1) 0%, rgba(21, 23, 36, 1) 49%, rgba(18, 55, 61, 1) 100%, rgba(0, 212, 255, 1) 100%);
+}
+
+
+nav.breadcrumb {
+    padding: 1em;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 16px; /* Increase the breadcrumb size */
+}
+
+nav.breadcrumb ol {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+nav.breadcrumb li {
+    display: inline;
+}
+
+nav.breadcrumb li + li::before {
+    display: inline-block;
+    margin: 0 0.5em; /* Increase the space between breadcrumb items */
+    transform: rotate(15deg);
+    border-right: 0.1em solid currentColor;
+    height: 0.8em;
+    content: "";
+}
+
+nav.breadcrumb [aria-current="page"] {
+    color: #37cfc2;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* Add hover effect */
+nav.breadcrumb li:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Optional: Change the color when hovering */
+nav.breadcrumb li:hover a {
+    color: #37cfc2;
+    text-decoration: none;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 640px) {
+    nav.breadcrumb {
+        font-size: 14px; /* Decrease the breadcrumb size for smaller screens */
+    }
+}
+
+/* Add styles for button state */
+button[type="submit"]:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Adjust button and field width */
+form {
+    display: grid;
+    gap: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+}
+
+/* Make button and field more rounded */
+input[type="text"],
+input[type="email"],
+select,
+textarea,
+button[type="submit"] {
+    border-radius: 9999px;
+}
+
+.buy-button {
+    border-radius: 15px;
+    width: 160px;
+    height: 50px;
+    font-size: 15px;
+
+}
+
+/* Breakpoint 1 */
+@media screen and (max-width: 480px) {
+    .buy-button {
+        width: 140px;
+        height: 50px;
+        font-size: 12px;
+    }
+}
+
+/* Breakpoint 2 */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .buy-button {
+        width: 120px;
+        height: 45px;
+        font-size: 13px;
+    }
+}
+
+/* Breakpoint 3 */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .buy-button {
+        width: 60px;
+        height: 50px;
+        font-size: 14px;
+    }
+}
+
+/* Breakpoint 4 */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    .buy-button {
+        width: 85px;
+        height: 55px;
+        font-size: 15px;
+    }
+}
+
+/* Breakpoint 5 */
+@media screen and (min-width: 1201px) {
+    .buy-button {
+        width: 160px;
+        height: 50px;
+        font-size: 16px;
+    }
+}
+
+
